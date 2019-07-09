@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "fillit.h"
-#include <stdio.h>
 
 t_list	*ft_save_piece(char *piece, char c)
 {
@@ -72,7 +71,7 @@ t_list	*ft_read_file(int fd)
 	char	c;
 
 	c = 'A';
-	size = 0;
+	nb_pieces = 0;
 	while ((count = read(fd, buf, 21)) == 21)
 	{
 		buf[count] = '\0';
