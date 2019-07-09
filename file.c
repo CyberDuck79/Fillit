@@ -67,7 +67,7 @@ t_list	*ft_read_file(int fd)
 {
 	int		count;
 	int		nb_pieces;
-	char	buf[21];
+	char	buf[22];
 	char	c;
 
 	c = 'A';
