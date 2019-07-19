@@ -6,7 +6,7 @@
 /*   By: flavienhenrion <flavienhenrion@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/02 18:01:37 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/07/19 22:51:25 by flavienhenr      ###   ########.fr       */
+/*   Updated: 2019/07/19 23:05:41 by flavienhenr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	ft_compare_tab(int *tab1, int *tab2)
 
 static int	ft_compare_piece(int *tab)
 {
-	return ( ft_compare_tab(tab, I_PIECE) || ft_compare_tab(tab, IH_PIECE) || \
+	return (ft_compare_tab(tab, I_PIECE) || ft_compare_tab(tab, IH_PIECE) || \
 	ft_compare_tab(tab, O_PIECE) || ft_compare_tab(tab, LR_PIECE) || \
 	ft_compare_tab(tab, L_PIECE) || ft_compare_tab(tab, LD_PIECE) || \
 	ft_compare_tab(tab, LL_PIECE) || ft_compare_tab(tab, J_PIECE) || \
@@ -34,7 +34,7 @@ static int	ft_compare_piece(int *tab)
 	ft_compare_tab(tab, TR_PIECE) || ft_compare_tab(tab, TD_PIECE) || \
 	ft_compare_tab(tab, TL_PIECE) || ft_compare_tab(tab, S_PIECE) || \
 	ft_compare_tab(tab, SR_PIECE) || ft_compare_tab(tab, Z_PIECE) || \
-	ft_compare_tab(tab, ZR_PIECE) );
+	ft_compare_tab(tab, ZR_PIECE));
 }
 
 static void	ft_normalize(int *tab)
