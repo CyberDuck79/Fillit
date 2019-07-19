@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fhenrion <fhenrion@student.42.fr>          +#+  +:+       +#+         #
+#    By: flavienhenrion <flavienhenrion@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/12 12:34:06 by linfan            #+#    #+#              #
-#    Updated: 2019/06/17 16:17:57 by fhenrion         ###   ########.fr        #
+#    Updated: 2019/07/19 22:07:20 by flavienhenr      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ OBJECTS		=	$(SOURCES:.c = .o)
 all: $(NAME)
 
 $(NAME): $(OBJECTS) $(LIBRARY)
-	@$(CC) $(CFLAGS) -o $@ $^
+	@$(CC) $(CFLAGS) -o $@ $^ -fsanitize=address -O1
 	@echo $(GREEN)  [√]     [Program Successfully Compiled!]
 $(LIBRARY):
 	@make -C libft/

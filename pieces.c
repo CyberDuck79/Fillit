@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   pieces.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fhenrion <fhenrion@student.42.fr>          +#+  +:+       +#+        */
+/*   By: flavienhenrion <flavienhenrion@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/02 18:01:37 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/06/12 12:03:57 by linfan           ###   ########.fr       */
+/*   Updated: 2019/07/19 22:51:25 by flavienhenr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		ft_compare_tab(int *tab1, int *tab2)
+static int	ft_compare_tab(int *tab1, int *tab2)
 {
 	int	i;
 
@@ -23,31 +23,21 @@ int		ft_compare_tab(int *tab1, int *tab2)
 	return (1);
 }
 
-int		ft_compare_piece(int *tab, int i)
+static int	ft_compare_piece(int *tab)
 {
-	i += ft_compare_tab(tab, I_PIECE);
-	i += ft_compare_tab(tab, IH_PIECE);
-	i += ft_compare_tab(tab, O_PIECE);
-	i += ft_compare_tab(tab, LR_PIECE);
-	i += ft_compare_tab(tab, L_PIECE);
-	i += ft_compare_tab(tab, LD_PIECE);
-	i += ft_compare_tab(tab, LL_PIECE);
-	i += ft_compare_tab(tab, J_PIECE);
-	i += ft_compare_tab(tab, JR_PIECE);
-	i += ft_compare_tab(tab, JD_PIECE);
-	i += ft_compare_tab(tab, JL_PIECE);
-	i += ft_compare_tab(tab, T_PIECE);
-	i += ft_compare_tab(tab, TR_PIECE);
-	i += ft_compare_tab(tab, TD_PIECE);
-	i += ft_compare_tab(tab, TL_PIECE);
-	i += ft_compare_tab(tab, S_PIECE);
-	i += ft_compare_tab(tab, SR_PIECE);
-	i += ft_compare_tab(tab, Z_PIECE);
-	i += ft_compare_tab(tab, ZR_PIECE);
-	return (i);
+	return ( ft_compare_tab(tab, I_PIECE) || ft_compare_tab(tab, IH_PIECE) || \
+	ft_compare_tab(tab, O_PIECE) || ft_compare_tab(tab, LR_PIECE) || \
+	ft_compare_tab(tab, L_PIECE) || ft_compare_tab(tab, LD_PIECE) || \
+	ft_compare_tab(tab, LL_PIECE) || ft_compare_tab(tab, J_PIECE) || \
+	ft_compare_tab(tab, JR_PIECE) || ft_compare_tab(tab, JD_PIECE) || \
+	ft_compare_tab(tab, JL_PIECE) || ft_compare_tab(tab, T_PIECE) || \
+	ft_compare_tab(tab, TR_PIECE) || ft_compare_tab(tab, TD_PIECE) || \
+	ft_compare_tab(tab, TL_PIECE) || ft_compare_tab(tab, S_PIECE) || \
+	ft_compare_tab(tab, SR_PIECE) || ft_compare_tab(tab, Z_PIECE) || \
+	ft_compare_tab(tab, ZR_PIECE) );
 }
 
-void	ft_normalize(int *tab)
+static void	ft_normalize(int *tab)
 {
 	int	i;
 	int	min_x;
@@ -90,7 +80,7 @@ int		*ft_parse_piece(char *piece, char c)
 		}
 	}
 	ft_normalize(tab);
-	if (!ft_compare_piece(tab, 0))
+	if (!ft_compare_piece(tab))
 		return (NULL);
 	tab[t] = (int)c;
 	return (tab);

@@ -6,13 +6,13 @@
 /*   By: flavienhenrion <flavienhenrion@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/02 18:02:36 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/07/19 21:59:52 by flavienhenr      ###   ########.fr       */
+/*   Updated: 2019/07/19 22:55:37 by flavienhenr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-t_list	*ft_save_piece(char *piece, char c)
+static t_list	*ft_save_piece(char *piece, char c)
 {
 	static t_list	*list;
 	t_list			*tmp;
@@ -35,7 +35,7 @@ t_list	*ft_save_piece(char *piece, char c)
 	return (list);
 }
 
-int		ft_check_piece(char *piece, int end)
+static int		ft_check_piece(char *piece, int end)
 {
 	int	i;
 	int	hash;
@@ -63,7 +63,7 @@ int		ft_check_piece(char *piece, int end)
 	return (0);
 }
 
-t_list	*ft_read_file(int fd)
+t_list			*ft_read_file(int fd)
 {
 	int		count;
 	int		nb_pieces;

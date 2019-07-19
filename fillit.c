@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fhenrion <fhenrion@student.42.fr>          +#+  +:+       +#+        */
+/*   By: flavienhenrion <flavienhenrion@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:18:13 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/06/17 16:21:40 by fhenrion         ###   ########.fr       */
+/*   Updated: 2019/07/19 22:52:35 by flavienhenr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		ft_backtrack(char **grid, t_list *lst, int size, int position)
+static int	ft_backtrack(char **grid, t_list *lst, int size, int position)
 {
 	if (!lst)
 		return (1);
@@ -30,7 +30,7 @@ int		ft_backtrack(char **grid, t_list *lst, int size, int position)
 	return (0);
 }
 
-int		ft_solve(t_list *lst)
+static int	ft_solve(t_list *lst)
 {
 	char	**grid;
 	int		size;
