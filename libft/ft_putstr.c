@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fhenrion <fhenrion@student.42.fr>          +#+  +:+       +#+        */
+/*   By: flavienhenrion <flavienhenrion@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/09 18:47:54 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/06/02 17:51:01 by fhenrion         ###   ########.fr       */
+/*   Updated: 2019/07/19 23:10:24 by flavienhenr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 void	ft_putstr(char const *s)
 {
-	char *ptr;
+	unsigned int	i;
 
+	i = 0;
 	if (!s)
 		return ;
-	ptr = (char*)s;
-	while (*ptr)
-		ft_putchar(*ptr++);
+	while (s[i])
+		i++;
+	write(1, s, i);
 }
