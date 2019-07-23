@@ -48,7 +48,7 @@ static int		ft_check_piece(char *piece, int end)
 	{
 		if (!(piece[i] == '#' || piece[i] == '.' || piece[i] == '\n'))
 			return (1);
-		if (piece[i] == '#')
+		esle if (piece[i] == '#')
 			hash++;
 		else if (!end && piece[i] == '\n' \
 				&& !(i == 4 || i == 9 || i == 14 || i == 19 || i == 20))
