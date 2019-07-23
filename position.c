@@ -50,8 +50,6 @@ int		ft_check_position(char **grid, int position, int size, int *tab)
 	int	y;
 	int	i;
 
-	if (position > size * size)
-		return (-1);
 	i = 0;
 	x = position % size;
 	y = position / size;
