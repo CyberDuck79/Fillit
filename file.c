@@ -42,6 +42,8 @@ static int		ft_check_piece(char *piece, int end)
 
 	i = 0;
 	hash = 0;
+	if (end && ft_strlen(piece) != 20)
+		return (1);
 	while (piece[i] != '\0')
 	{
 		if (!(piece[i] == '#' || piece[i] == '.' || piece[i] == '\n'))
@@ -56,8 +58,6 @@ static int		ft_check_piece(char *piece, int end)
 			return (1);
 		i++;
 	}
-	if (end && ft_strlen(piece) != 20)
-		return (1);
 	if (hash != 4)
 		return (1);
 	return (0);
