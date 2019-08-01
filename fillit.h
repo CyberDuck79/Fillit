@@ -39,11 +39,11 @@
 
 int		*ft_parse_piece(char *piece, char c);
 t_list	*ft_read_file(int fd);
-char	**ft_gen_grid(int size);
-void	ft_free_grid(char **grid, int size);
+char	**ft_gen_grid(const int size);
+void	ft_free_grid(const char **grid, const int size);
 void	ft_free_coord(t_list *lst);
-void	ft_print_grid(char **grid, int size);
-int		ft_start_size(t_list *lst);
+void	ft_print_grid(const char **grid, const int size);
+int		ft_start_size(const t_list *lst);
 void	ft_put_piece(char **grid, int position, int size, int *tab);
 void	ft_rm_piece(char **grid, int position, int size, int *tab);
 int		ft_check_position(char **grid, int position, int size, int *tab);
