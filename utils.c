@@ -12,7 +12,7 @@
 
 #include "fillit.h"
 
-char	**ft_gen_grid(int size)
+char	**ft_gen_grid(const int size)
 {
 	char	**grid;
 	int		i;
@@ -30,7 +30,7 @@ char	**ft_gen_grid(int size)
 	return (grid);
 }
 
-void	ft_free_grid(char **grid, int size)
+void	ft_free_grid(const char **grid, const int size)
 {
 	int	i;
 
@@ -53,7 +53,7 @@ void	ft_free_coord(t_list *lst)
 	}
 }
 
-void	ft_print_grid(char **grid, int size)
+void	ft_print_grid(const char **grid, const int size)
 {
 	int	i;
 
@@ -66,7 +66,7 @@ void	ft_print_grid(char **grid, int size)
 	free(grid);
 }
 
-int		ft_start_size(t_list *lst)
+int		ft_start_size(const t_list *lst)
 {
 	int	size;
 	int	hashes;
