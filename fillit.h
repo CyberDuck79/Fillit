@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavienhenrion <flavienhenrion@student.    +#+  +:+       +#+        */
+/*   By: fhenrion <fhenrion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 12:11:57 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/07/19 22:55:52 by flavienhenr      ###   ########.fr       */
+/*   Created: 2019/08/09 15:34:26 by fhenrion          #+#    #+#             */
+/*   Updated: 2019/08/09 15:34:34 by fhenrion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 int		*ft_parse_piece(char *piece, char c);
 t_list	*ft_read_file(int fd);
 char	**ft_gen_grid(int size);
-void	ft_free_grid(char **grid,int size);
+void	ft_free_grid(char **grid, int size);
 void	ft_free_coord(t_list *lst);
 void	ft_print_grid(char **grid, int size);
 int		ft_start_size(t_list *lst);

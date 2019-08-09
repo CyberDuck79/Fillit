@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pieces.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavienhenrion <flavienhenrion@student.    +#+  +:+       +#+        */
+/*   By: fhenrion <fhenrion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/02 18:01:37 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/07/19 23:05:41 by flavienhenr      ###   ########.fr       */
+/*   Created: 2019/08/09 15:33:52 by fhenrion          #+#    #+#             */
+/*   Updated: 2019/08/09 15:33:56 by fhenrion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static void	ft_normalize(int *tab)
 	}
 }
 
-int		*ft_parse_piece(char *piece, char c)
+int			*ft_parse_piece(char *piece, char c)
 {
 	int	i;
 	int	t;

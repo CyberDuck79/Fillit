@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavienhenrion <flavienhenrion@student.    +#+  +:+       +#+        */
+/*   By: fhenrion <fhenrion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 12:18:13 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/07/19 22:52:35 by flavienhenr      ###   ########.fr       */
+/*   Created: 2019/08/09 15:34:00 by fhenrion          #+#    #+#             */
+/*   Updated: 2019/08/09 15:34:11 by fhenrion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static int	ft_solve(t_list *lst)
 	return (1);
 }
 
-int		main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
 	int		fd;
 	t_list	*lst;

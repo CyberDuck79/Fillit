@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   file.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavienhenrion <flavienhenrion@student.    +#+  +:+       +#+        */
+/*   By: fhenrion <fhenrion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/02 18:02:36 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/07/19 22:55:37 by flavienhenr      ###   ########.fr       */
+/*   Created: 2019/08/09 15:34:50 by fhenrion          #+#    #+#             */
+/*   Updated: 2019/08/09 15:35:21 by fhenrion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static int		ft_check_piece(char *piece, int end)
 	{
 		if (!(piece[i] == '#' || piece[i] == '.' || piece[i] == '\n'))
 			return (1);
-		esle if (piece[i] == '#')
+		else if (piece[i] == '#')
 			hash++;
 		else if (!end && piece[i] == '\n' \
 				&& !(i == 4 || i == 9 || i == 14 || i == 19 || i == 20))
